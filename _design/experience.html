@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Space+Grotesk:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#fffbff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdcc5",
+                        "tertiary": "#904900",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "secondary-container": "#d0e1fb",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "secondary-fixed": "#d3e4fe",
+                        "on-primary-fixed": "#07006c",
+                        "on-primary-container": "#fffbff",
+                        "tertiary-container": "#b55d00",
+                        "primary": "#4648d4",
+                        "primary-fixed": "#e1e0ff",
+                        "background": "#faf8ff",
+                        "outline-variant": "#c7c4d7",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-highest": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#494bd6",
+                        "primary-container": "#6063ee",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "secondary": "#505f76",
+                        "on-surface": "#131b2e",
+                        "inverse-surface": "#283044",
+                        "inverse-primary": "#c0c1ff",
+                        "on-background": "#131b2e",
+                        "surface-variant": "#dae2fd",
+                        "surface-bright": "#faf8ff",
+                        "on-surface-variant": "#464554",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-tertiary-fixed": "#301400",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-dim": "#d2d9f4",
+                        "surface-container-low": "#f2f3ff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#767586",
+                        "surface": "#faf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-secondary-container": "#54647a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "none": "0px",
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"],
+                        "mono": ["IBM Plex Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .geometric-mesh {
+            background-color: #faf8ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%234648d4' fill-opacity='0.03'%3E%3Cpath d='M0 0 L40 40 L0 80 Z M80 0 L40 40 L80 80 Z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hexagon-clip {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .diagonal-divider {
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+        .diagonal-divider-reverse {
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar Implementation from JSON -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 h-20 bg-[#faf8ff]/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-none border-b border-indigo-500/10">
+<div class="flex items-center gap-2">
+<span class="text-xl font-black text-[#131b2e] dark:text-white tracking-tighter">ARCHITECT.V1</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Inter'] tracking-tight font-bold uppercase text-[12px] text-[#505f76] dark:text-slate-400 hover:text-[#4648d4] transition-colors duration-150" href="#">Projects</a>
+<a class="font-['Inter'] tracking-tight font-bold uppercase text-[12px] text-[#4648d4] dark:text-indigo-400 border-b-2 border-[#4648d4] pb-1" href="#">Experience</a>
+<a class="font-['Inter'] tracking-tight font-bold uppercase text-[12px] text-[#505f76] dark:text-slate-400 hover:text-[#4648d4] transition-colors duration-150" href="#">Stack</a>
+<a class="font-['Inter'] tracking-tight font-bold uppercase text-[12px] text-[#505f76] dark:text-slate-400 hover:text-[#4648d4] transition-colors duration-150" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">terminal</span>
+<button class="bg-primary text-white px-6 py-2 font-['Inter'] tracking-tight font-bold uppercase text-[12px] rounded-none hover:bg-primary-container transition-all">Resume</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero/Intro Section for Context -->
+<section class="relative bg-surface-container-lowest py-24 px-8 geometric-mesh diagonal-divider overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="mb-4">
+<span class="font-label text-primary text-sm tracking-[0.2em] uppercase font-bold">Chronology / Lifecycle</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black text-on-surface tracking-tighter leading-none mb-6">
+                    ENGINEERING<br/>
+<span class="text-primary">HISTORY.</span>
+</h1>
+<p class="max-w-2xl text-on-surface-variant text-lg leading-relaxed font-body">
+                    A technical record of system architecture, team leadership, and algorithmic problem-solving across diverse technological landscapes.
+                </p>
+</div>
+<!-- Decorative Hexagon -->
+<div class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 hexagon-clip pointer-events-none"></div>
+</section>
+<!-- Experience Timeline Section -->
+<section class="py-24 px-8 bg-background relative">
+<div class="max-w-5xl mx-auto">
+<!-- Section Header -->
+<div class="mb-20">
+<h2 class="text-4xl font-black text-on-surface tracking-tight flex flex-col gap-2">
+                        Experience
+                        <span class="w-24 h-2 bg-primary"></span>
+</h2>
+</div>
+<!-- Timeline Container -->
+<div class="relative">
+<!-- Vertical Timeline Spine -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2 hidden md:block"></div>
+<!-- Experience Entry 1: Left Aligned -->
+<div class="relative mb-24 md:flex md:justify-between items-center w-full">
+<div class="md:w-[45%] mb-8 md:mb-0 group">
+<div class="bg-surface-container-lowest border border-outline-variant/20 p-8 relative overflow-hidden">
+<!-- Sharp Accent -->
+<div class="absolute top-0 right-0 w-12 h-12 bg-primary/10 flex items-center justify-center">
+<span class="font-mono text-[10px] font-bold text-primary">01</span>
+</div>
+<div class="flex items-center gap-6 mb-6">
+<div class="w-16 h-16 bg-on-surface hexagon-clip flex items-center justify-center flex-shrink-0">
+<img class="w-full h-full object-cover opacity-80" data-alt="minimalist tech company logo with abstract geometric patterns on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9f0Ugd8z8Gi_jbOOXEWAXvZoH2Q6paAOKD_8bEi6UXTwWSyuFL0ZerasLiNaTCnYS9BFCjLo173eIpbcbiq4Vy17kmcd-rSyNp41PZ9xoAfY-5i03y4P80t6cvXptITmTZaU0AqLgdiRxuav-J1CFuATsIWEk8vvNExFGA6p7Iy_GaEMpBhceJuzgyi5MpMWgcwoZiUuN0nYyKZVqC3gpAInib3QUhlLTBGDCGhPlmlE1cFs0nexoPf8xTLl0JoPoRZko0l9CRoA"/>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface tracking-tight">System Paradigm Inc.</h3>
+<p class="font-label text-primary font-bold text-sm tracking-wider uppercase">Senior Software Architect</p>
+</div>
+</div>
+<div class="font-mono text-xs text-on-surface-variant mb-6 bg-surface-container-high px-3 py-1 inline-block">
+                                    [ 2022.06 — PRESENT ]
+                                </div>
+<ul class="space-y-4 text-on-surface-variant text-sm leading-relaxed">
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Orchestrated the migration of monolithic payment gateways to a high-throughput microservices architecture, reducing latency by 42%.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Implemented a custom distributed caching layer using Redis and Go, handling 1.2M concurrent requests during peak cycles.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Spearheaded the adoption of Infrastructure-as-Code (Terraform) across three global data centers.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Connector Decorator (Center) -->
+<div class="absolute left-1/2 -translate-x-1/2 top-10 hidden md:flex flex-col items-center gap-1">
+<div class="w-4 h-4 bg-primary rotate-45 border-2 border-background"></div>
+<div class="w-px h-12 bg-primary"></div>
+</div>
+<div class="md:w-[45%] hidden md:block"></div>
+</div>
+<!-- Experience Entry 2: Right Aligned -->
+<div class="relative mb-24 md:flex md:justify-between items-center w-full md:flex-row-reverse">
+<div class="md:w-[45%] mb-8 md:mb-0 group">
+<div class="bg-surface-container-lowest border border-outline-variant/20 p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-12 h-12 bg-primary/10 flex items-center justify-center">
+<span class="font-mono text-[10px] font-bold text-primary">02</span>
+</div>
+<div class="flex items-center gap-6 mb-6">
+<div class="w-16 h-16 bg-on-surface hexagon-clip flex items-center justify-center flex-shrink-0">
+<img class="w-full h-full object-cover opacity-80" data-alt="abstract vector brand mark for a software house with blue and violet gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBge0JKo5R4lGdqdSSKrm-k4nP-tWhKGlTYdZICwlciChKCyCimgErsIWOmLDHWxpFzNeAoRSDBf0pkPo5qnAkkCrKQNjYzKBgtf2XFuVqBXSWwmOCIZuJcnXMV-JhxtHOSt0rCdmYVLvTVcZm7KEVfA7wC6shRYqC3ysE0CmkoC3lGyjt3Xi_nLESWflgzigbqC2SqlntVyxzVs0X3g56vnOrIzXIp5AaLFf_-UTE74KCQmmKw3PDWwdvB3vJpY3eim2mtpyAr1sw"/>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface tracking-tight">Quantum Logic Lab</h3>
+<p class="font-label text-primary font-bold text-sm tracking-wider uppercase">Full Stack Engineer</p>
+</div>
+</div>
+<div class="font-mono text-xs text-on-surface-variant mb-6 bg-surface-container-high px-3 py-1 inline-block">
+                                    [ 2019.01 — 2022.05 ]
+                                </div>
+<ul class="space-y-4 text-on-surface-variant text-sm leading-relaxed">
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Developed an AI-driven predictive modeling dashboard using React and Python (FastAPI), utilized by 50+ enterprise clients.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Optimized SQL query performance for multi-terabyte datasets, achieving a 30% reduction in average reporting time.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Connector Decorator (Center) -->
+<div class="absolute left-1/2 -translate-x-1/2 top-10 hidden md:flex flex-col items-center gap-1">
+<div class="w-4 h-4 bg-primary rotate-45 border-2 border-background"></div>
+<div class="w-px h-12 bg-primary"></div>
+</div>
+<div class="md:w-[45%] hidden md:block"></div>
+</div>
+<!-- Experience Entry 3: Left Aligned -->
+<div class="relative mb-24 md:flex md:justify-between items-center w-full">
+<div class="md:w-[45%] mb-8 md:mb-0 group">
+<div class="bg-surface-container-lowest border border-outline-variant/20 p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-12 h-12 bg-primary/10 flex items-center justify-center">
+<span class="font-mono text-[10px] font-bold text-primary">03</span>
+</div>
+<div class="flex items-center gap-6 mb-6">
+<div class="w-16 h-16 bg-on-surface hexagon-clip flex items-center justify-center flex-shrink-0">
+<img class="w-full h-full object-cover opacity-80" data-alt="clean geometric logo of a data startup using sharp triangles and lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXPEgB6vN0FFMlBl0kZjGyznCC0BP_BMzI67dvvvwWmvj_bC1hcmFh_pu-MDtUICoVUNDxg99QUOOOMLuU3csz6Qm3hPHyXkJ81gc6LMNnrLZqui26ajZd2FtXfqnQO8wRSI0KXhKkjJD3SilhENmpMfde6VbUUAbjNmKDszBvtHtrk3xBD0h6wqWYbOP1uK4iPLh0zGYHok5fV6fBnpmHAueUPspfhvl6kYlGJFmIhWv9tlDEcmrVbl1rJaZkHV7VmWxUUDTJVQU"/>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface tracking-tight">BitStream Dev</h3>
+<p class="font-label text-primary font-bold text-sm tracking-wider uppercase">Junior Web Developer</p>
+</div>
+</div>
+<div class="font-mono text-xs text-on-surface-variant mb-6 bg-surface-container-high px-3 py-1 inline-block">
+                                    [ 2017.08 — 2018.12 ]
+                                </div>
+<ul class="space-y-4 text-on-surface-variant text-sm leading-relaxed">
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Architected internal toolkits for rapid prototyping, cutting front-end development time for client projects by 20%.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-primary mt-1 material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
+<span>Collaborated on the refactoring of legacy PHP codebases into modern JavaScript frameworks.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Connector Decorator (Center) -->
+<div class="absolute left-1/2 -translate-x-1/2 top-10 hidden md:flex flex-col items-center gap-1">
+<div class="w-4 h-4 bg-primary rotate-45 border-2 border-background"></div>
+<div class="w-px h-12 bg-primary"></div>
+</div>
+<div class="md:w-[45%] hidden md:block"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8 bg-on-surface text-white diagonal-divider-reverse relative overflow-hidden">
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-black mb-8 tracking-tighter uppercase">Looking for an <span class="text-primary-fixed-dim">Architect?</span></h2>
+<p class="text-secondary-fixed-dim text-lg mb-12 max-w-xl mx-auto font-body">
+                    I am currently open to high-impact opportunities in distributed systems and platform engineering.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-primary text-white font-label font-bold uppercase tracking-widest px-10 py-5 hover:bg-primary-container transition-all">Download CV</button>
+<button class="border border-white/20 text-white font-label font-bold uppercase tracking-widest px-10 py-5 hover:bg-white/10 transition-all">Connect on LinkedIn</button>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<div class="grid grid-cols-12 h-full">
+<div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div>
+<div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div>
+<div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Implementation from JSON -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-slate-200 dark:border-slate-800 bg-[#faf8ff] dark:bg-slate-950">
+<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
+<span class="font-bold text-[#131b2e] dark:text-white font-['Inter']">ARCHITECT.V1</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-[#505f76]">© 2024 ARCHITECT.V1 // SYSTEM STATUS: OPTIMAL</span>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-[#505f76] hover:text-indigo-600 transition-opacity" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-[#505f76] hover:text-indigo-600 transition-opacity" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-[#505f76] hover:text-indigo-600 transition-opacity" href="#">Source Code</a>
+</div>
+</footer>
+</body></html>

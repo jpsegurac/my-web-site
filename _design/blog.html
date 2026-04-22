@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog &amp; Solutions | ARCHITECT.IO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdcc5",
+                        "tertiary": "#904900",
+                        "secondary-fixed": "#d3e4fe",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#b55d00",
+                        "surface-container-low": "#f2f3ff",
+                        "background": "#faf8ff",
+                        "surface-bright": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d0e1fb",
+                        "on-surface": "#131b2e",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "on-primary-fixed": "#07006c",
+                        "outline": "#767586",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-secondary-container": "#54647a",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "surface-variant": "#dae2fd",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d2d9f4",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#c0c1ff",
+                        "outline-variant": "#c7c4d7",
+                        "on-background": "#131b2e",
+                        "primary-fixed": "#e1e0ff",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "secondary": "#505f76",
+                        "surface-tint": "#494bd6",
+                        "surface-container": "#eaedff",
+                        "primary-container": "#6063ee",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-highest": "#dae2fd",
+                        "on-tertiary-fixed": "#301400",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#283044",
+                        "surface": "#faf8ff",
+                        "surface-container-high": "#e2e7ff",
+                        "on-surface-variant": "#464554",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "primary": "#4648d4",
+                        "inverse-on-surface": "#eef0ff"
+                    },
+                    "borderRadius": {
+                        "none": "0px",
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .dot-grid {
+            background-image: radial-gradient(circle, #c7c4d7 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .diagonal-divider {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .geometric-tag {
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 h-20 max-w-[1920px] mx-auto bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-none rounded-none border-b-0">
+<div class="text-2xl font-black tracking-tighter text-slate-900 dark:text-slate-50 font-['Inter']">ARCHITECT.IO</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium font-['Inter'] font-bold tracking-tight uppercase hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-150 scale-100 active:scale-95 transition-transform duration-100" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium font-['Inter'] font-bold tracking-tight uppercase hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-150 scale-100 active:scale-95 transition-transform duration-100" href="#">Experience</a>
+<a class="text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 pb-1 font-['Inter'] font-bold tracking-tight uppercase hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-150 scale-100 active:scale-95 transition-transform duration-100" href="#">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium font-['Inter'] font-bold tracking-tight uppercase hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-150 scale-100 active:scale-95 transition-transform duration-100" href="#">Solutions</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-['Inter'] font-bold tracking-tight uppercase hover:bg-primary-container transition-colors scale-100 active:scale-95 duration-100">
+            Connect
+        </button>
+</nav>
+<main class="pt-20 dot-grid min-h-screen">
+<!-- Hero / Featured Post Section -->
+<header class="relative w-full overflow-hidden diagonal-divider bg-surface-container-low pt-12 pb-32">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-12 h-12 bg-primary flex items-center justify-center" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black tracking-tighter text-on-surface">Blog &amp; Solutions</h1>
+</div>
+<!-- Featured Post -->
+<div class="group relative bg-surface-container-lowest border-l-8 border-primary p-0 flex flex-col md:flex-row shadow-[0px_20px_40px_rgba(15,23,42,0.06)]">
+<div class="w-full md:w-1/2 overflow-hidden h-64 md:h-auto relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-inverse-surface mix-blend-multiply opacity-20"></div>
+<img alt="Featured Post" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract geometric landscape with floating indigo triangles and crystalline structures against a dark slate blueprint background with grid lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhF9lYTzYqcS6LWqQEmSkp2biinbGjpbHyPUujksBVoSjBvHsCIeakYIoa70ExktalY2UQnjQhOOStcYjBS8L2HHEWpqUmgbZ05K_rDHIdZcsFOhqS9VWZ37BrE7ce4Vpu3yKT81w6tZjYzKtS8KCtrwCxXM3PFD8fmFlo0vy7DeEgYiCPkBH8myOLprwWQfeKqCuTULiVvsz8NneRNPzeETY3Nyoxwdrha5xsiTgqlmbcfDvyszjYhNZee42Fs2Vdi_jeKuuWd8c"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary font-label px-6 py-1 text-sm tracking-widest geometric-tag">FEATURED</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-4 text-secondary font-label text-xs tracking-widest uppercase">
+<span>October 24, 2024</span>
+<span class="w-1 h-1 bg-outline-variant"></span>
+<span>12 Min Read</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-on-surface leading-tight">Architecting Scalable Micro-Frontends with Module Federation</h2>
+<p class="text-secondary body-lg mb-8 line-clamp-3">Deep dive into the structural patterns of modern distributed UI architectures. We explore how to manage shared state, global styling, and dependency versioning across independent development teams.</p>
+<div class="flex items-center justify-between">
+<div class="flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant px-4 py-1 text-xs font-label uppercase geometric-tag">Architecture</span>
+<span class="bg-surface-variant text-on-surface-variant px-4 py-1 text-xs font-label uppercase geometric-tag">React</span>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                READ ARTICLE <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Filter Bar -->
+<section class="max-w-7xl mx-auto px-8 -mt-8 relative z-20 mb-16">
+<div class="bg-surface-container-lowest p-1 flex flex-wrap items-center gap-1 shadow-sm border border-outline-variant/10">
+<button class="bg-primary text-on-primary font-label px-6 py-3 text-sm tracking-widest uppercase">All Posts</button>
+<button class="hover:bg-surface-container-high text-secondary font-label px-6 py-3 text-sm tracking-widest uppercase transition-colors">Development</button>
+<button class="hover:bg-surface-container-high text-secondary font-label px-6 py-3 text-sm tracking-widest uppercase transition-colors">DevOps</button>
+<button class="hover:bg-surface-container-high text-secondary font-label px-6 py-3 text-sm tracking-widest uppercase transition-colors">Security</button>
+<button class="hover:bg-surface-container-high text-secondary font-label px-6 py-3 text-sm tracking-widest uppercase transition-colors">Data Structures</button>
+<div class="ml-auto pr-4 hidden lg:flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-sm">search</span>
+<input class="border-none bg-transparent focus:ring-0 text-sm font-label uppercase tracking-widest w-48" placeholder="Search architecture..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Grid Content -->
+<section class="max-w-7xl mx-auto px-8 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest border-l-4 border-primary p-8 flex flex-col justify-between hover:shadow-[0px_10px_30px_rgba(70,72,212,0.1)] transition-all duration-300">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-surface-variant text-on-surface-variant font-label px-4 py-1 text-xs uppercase geometric-tag">DevOps</span>
+<span class="text-outline font-label text-xs">OCT 18, 2024</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 tracking-tight text-on-surface">Zero-Downtime Deployments with Kubernetes Blue-Green Patterns</h3>
+<p class="text-secondary text-sm mb-8 leading-relaxed">Implementing robust deployment strategies to ensure high availability and instant rollbacks in production environments.</p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-secondary font-label text-xs uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 8 min read
+                        </span>
+<a class="text-primary font-bold text-sm tracking-tighter flex items-center gap-1" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest border-l-4 border-primary p-8 flex flex-col justify-between hover:shadow-[0px_10px_30px_rgba(70,72,212,0.1)] transition-all duration-300">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-surface-variant text-on-surface-variant font-label px-4 py-1 text-xs uppercase geometric-tag">Security</span>
+<span class="text-outline font-label text-xs">OCT 12, 2024</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 tracking-tight text-on-surface">OAuth2 and OpenID Connect: The Definitive Guide for Devs</h3>
+<p class="text-secondary text-sm mb-8 leading-relaxed">Demystifying identity layers, scopes, and token flows for secure application development in 2024.</p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-secondary font-label text-xs uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 15 min read
+                        </span>
+<a class="text-primary font-bold text-sm tracking-tighter flex items-center gap-1" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest border-l-4 border-primary p-8 flex flex-col justify-between hover:shadow-[0px_10px_30px_rgba(70,72,212,0.1)] transition-all duration-300">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-surface-variant text-on-surface-variant font-label px-4 py-1 text-xs uppercase geometric-tag">Performance</span>
+<span class="text-outline font-label text-xs">OCT 05, 2024</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 tracking-tight text-on-surface">Memory Leak Detection in High-Load Node.js Applications</h3>
+<p class="text-secondary text-sm mb-8 leading-relaxed">Practical techniques for profiling heap dumps and identifying closures that refuse to be garbage collected.</p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-secondary font-label text-xs uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 10 min read
+                        </span>
+<a class="text-primary font-bold text-sm tracking-tighter flex items-center gap-1" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest border-l-4 border-primary p-8 flex flex-col justify-between hover:shadow-[0px_10px_30px_rgba(70,72,212,0.1)] transition-all duration-300">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-surface-variant text-on-surface-variant font-label px-4 py-1 text-xs uppercase geometric-tag">Database</span>
+<span class="text-outline font-label text-xs">SEP 28, 2024</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 tracking-tight text-on-surface">PostgreSQL Indexing: Beyond B-Trees for Geospatial Data</h3>
+<p class="text-secondary text-sm mb-8 leading-relaxed">Exploring GIST and SP-GIST index types for lightning-fast queries on complex coordinate-based datasets.</p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-secondary font-label text-xs uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 7 min read
+                        </span>
+<a class="text-primary font-bold text-sm tracking-tighter flex items-center gap-1" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined">west</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="w-10 h-10 flex items-center justify-center bg-primary text-on-primary font-label">1</span>
+<span class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high font-label cursor-pointer">2</span>
+<span class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high font-label cursor-pointer">3</span>
+<span class="font-label px-2">...</span>
+<span class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high font-label cursor-pointer">12</span>
+</div>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 rounded-none">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">ALGORITHMIC CANVAS</div>
+<div class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500">© 2024 ALGORITHMIC CANVAS. ALL RIGHTS RESERVED.</div>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 underline decoration-2 underline-offset-4 transition-all duration-200 ease-linear" href="#">Github</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 underline decoration-2 underline-offset-4 transition-all duration-200 ease-linear" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 underline decoration-2 underline-offset-4 transition-all duration-200 ease-linear" href="#">Documentation</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 underline decoration-2 underline-offset-4 transition-all duration-200 ease-linear" href="#">RSS Feed</a>
+</div>
+</footer>
+</body></html>

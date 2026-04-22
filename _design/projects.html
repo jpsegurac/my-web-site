@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects // JEAN SEGURA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "secondary-fixed": "#d3e4fe",
+                    "secondary-container": "#d0e1fb",
+                    "outline-variant": "#c7c4d7",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "tertiary-fixed-dim": "#ffb783",
+                    "primary-fixed": "#e1e0ff",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "primary-container": "#6063ee",
+                    "on-surface-variant": "#464554",
+                    "primary": "#4648d4",
+                    "on-tertiary-fixed-variant": "#703700",
+                    "on-error-container": "#93000a",
+                    "on-background": "#131b2e",
+                    "inverse-surface": "#283044",
+                    "surface": "#faf8ff",
+                    "on-secondary-container": "#54647a",
+                    "surface-container-high": "#e2e7ff",
+                    "tertiary-container": "#b55d00",
+                    "tertiary-fixed": "#ffdcc5",
+                    "secondary": "#505f76",
+                    "background": "#faf8ff",
+                    "surface-dim": "#d2d9f4",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "tertiary": "#904900",
+                    "surface-variant": "#dae2fd",
+                    "on-primary-fixed": "#07006c",
+                    "surface-container-highest": "#dae2fd",
+                    "outline": "#767586",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eaedff",
+                    "on-secondary-fixed": "#0b1c30",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c0c1ff",
+                    "inverse-on-surface": "#eef0ff",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#301400",
+                    "on-surface": "#131b2e",
+                    "on-primary-container": "#fffbff",
+                    "surface-tint": "#494bd6",
+                    "surface-container-low": "#f2f3ff",
+                    "on-tertiary-container": "#fffbff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .diagonal-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+        }
+        .dot-grid {
+            background-image: radial-gradient(circle, #c7c4d7 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .sharp-border { border-radius: 0 !important; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b-0">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<div class="text-xl font-black tracking-[-0.02em] text-slate-900 dark:text-slate-50 uppercase">
+                ARCHITECT.V1
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Inter'] font-bold tracking-tighter uppercase text-sm text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 pb-1" href="#">PROJECTS</a>
+<a class="font-['Inter'] font-bold tracking-tighter uppercase text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="#">SYSTEMS</a>
+<a class="font-['Inter'] font-bold tracking-tighter uppercase text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="#">ABOUT</a>
+<a class="font-['Inter'] font-bold tracking-tighter uppercase text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="#">GIT</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-['Inter'] font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all duration-150 sharp-border">
+                GET IN TOUCH
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero / Header Section -->
+<header class="relative bg-surface-container-low pt-20 pb-32 diagonal-clip dot-grid">
+<div class="max-w-[1440px] mx-auto px-8 relative z-10">
+<div class="flex items-center space-x-4 mb-2">
+<div class="w-4 h-4 bg-primary rotate-45"></div>
+<span class="font-label text-sm tracking-[0.2em] text-secondary uppercase">Selected Works</span>
+</div>
+<h1 class="text-7xl md:text-8xl font-black tracking-[-0.04em] text-on-surface uppercase mb-4">
+                    Projects
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                    Things I've built. A collection of engineered solutions focusing on performance, scalability, and structural integrity.
+                </p>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<section class="max-w-[1440px] mx-auto px-8 -mt-12 relative z-20 pb-24">
+<!-- Filter Tabs -->
+<div class="flex flex-wrap gap-2 mb-12">
+<button class="bg-primary text-on-primary font-label px-8 py-3 text-xs tracking-widest uppercase transition-all sharp-border">All</button>
+<button class="bg-surface-container-lowest text-secondary border border-outline-variant/30 font-label px-8 py-3 text-xs tracking-widest uppercase hover:bg-surface-container-high transition-all sharp-border">Web</button>
+<button class="bg-surface-container-lowest text-secondary border border-outline-variant/30 font-label px-8 py-3 text-xs tracking-widest uppercase hover:bg-surface-container-high transition-all sharp-border">Mobile</button>
+<button class="bg-surface-container-lowest text-secondary border border-outline-variant/30 font-label px-8 py-3 text-xs tracking-widest uppercase hover:bg-surface-container-high transition-all sharp-border">API</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-lowest border-l-4 border-primary p-8 shadow-[0px_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-transform duration-300 overflow-hidden">
+<!-- Watermark -->
+<div class="absolute -top-4 -right-4 opacity-[0.08] pointer-events-none">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary" d="M50 5L95 95H5L50 5Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase block mb-6">Case Study 01</span>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">NEURAL.GRID ENGINE</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                            A high-concurrency data processing pipeline designed for real-time neural network training synchronization across distributed clusters.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">React</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Rust</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">gRPC</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">AWS</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="code">code</span> GITHUB
+                            </a>
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="open_in_new">open_in_new</span> LIVE DEMO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-lowest border-l-4 border-primary p-8 shadow-[0px_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-transform duration-300 overflow-hidden">
+<!-- Watermark -->
+<div class="absolute -top-4 -right-4 opacity-[0.08] pointer-events-none">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary" d="M50 0L93.3013 25V75L50 100L6.69873 75V25L50 0Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase block mb-6">Case Study 02</span>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">CRYPTO.FLOW SDK</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                            A minimalist mobile SDK for blockchain wallet integration, optimized for low-latency transaction signing and secure key storage.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Swift</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Kotlin</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Web3.js</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="code">code</span> GITHUB
+                            </a>
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="open_in_new">open_in_new</span> LIVE DEMO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-lowest border-l-4 border-primary p-8 shadow-[0px_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-transform duration-300 overflow-hidden">
+<!-- Watermark -->
+<div class="absolute -top-4 -right-4 opacity-[0.08] pointer-events-none">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<rect class="text-primary" fill="currentColor" height="80" width="80" x="10" y="10"></rect>
+</svg>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase block mb-6">Case Study 03</span>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">QUANT.ANALYTICS</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                            A financial modeling API that delivers complex derivative pricing calculations via a serverless architecture with 99.99% uptime.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Python</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">FastAPI</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Docker</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">PostgreSQL</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="code">code</span> GITHUB
+                            </a>
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="open_in_new">open_in_new</span> LIVE DEMO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-lowest border-l-4 border-primary p-8 shadow-[0px_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-transform duration-300 overflow-hidden">
+<div class="absolute -top-4 -right-4 opacity-[0.08] pointer-events-none">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary" d="M50 5L95 95H5L50 5Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase block mb-6">Case Study 04</span>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">EDGE.CACHE</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                            A globally distributed edge caching layer written in Go, specifically optimized for static asset delivery at sub-10ms latency.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Go</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Redis</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Terraform</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="code">code</span> GITHUB
+                            </a>
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="open_in_new">open_in_new</span> LIVE DEMO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative bg-surface-container-lowest border-l-4 border-primary p-8 shadow-[0px_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-transform duration-300 overflow-hidden">
+<div class="absolute -top-4 -right-4 opacity-[0.08] pointer-events-none">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary" d="M50 0L93.3013 25V75L50 100L6.69873 75V25L50 0Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase block mb-6">Case Study 05</span>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">VECTOR.CMS</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                            A headless CMS built for engineering teams, featuring Git-based workflows and automatic TypeScript type generation.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">TypeScript</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Node.js</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">GraphQL</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="code">code</span> GITHUB
+                            </a>
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="open_in_new">open_in_new</span> LIVE DEMO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative bg-surface-container-lowest border-l-4 border-primary p-8 shadow-[0px_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-transform duration-300 overflow-hidden">
+<div class="absolute -top-4 -right-4 opacity-[0.08] pointer-events-none">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<rect class="text-primary" fill="currentColor" height="80" width="80" x="10" y="10"></rect>
+</svg>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase block mb-6">Case Study 06</span>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">PULSE.MONITOR</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                            A real-time health monitoring dashboard for Kubernetes clusters, providing visual insights into pod resource exhaustion.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Next.js</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">Prometheus</span>
+<span class="font-label text-[10px] bg-surface-container px-2 py-1 uppercase text-secondary">K8s</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="code">code</span> GITHUB
+                            </a>
+<a class="flex items-center text-primary font-label text-xs tracking-widest hover:underline decoration-2 underline-offset-4" href="#">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="open_in_new">open_in_new</span> LIVE DEMO
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTAs / Social Section -->
+<section class="bg-surface py-24 border-t border-outline-variant/10">
+<div class="max-w-[1440px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+<div>
+<h2 class="text-4xl font-black tracking-tight uppercase text-on-surface mb-2">Build something next-gen?</h2>
+<p class="text-on-surface-variant">Available for high-impact technical collaborations.</p>
+</div>
+<div class="mt-8 md:mt-0 flex space-x-4">
+<button class="bg-primary text-on-primary font-label px-10 py-4 text-sm tracking-[0.2em] uppercase hover:bg-primary-container transition-all sharp-border">Initialize Contact</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full border-t-0">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-[1440px] mx-auto">
+<div class="font-black text-slate-900 dark:text-slate-50 mb-6 md:mb-0">
+                ARCHITECT.V1
+            </div>
+<div class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-400 mb-6 md:mb-0">
+                © 2024 ARCHITECT.V1 // ENGINEERED FOR PRECISION
+            </div>
+<div class="flex space-x-8">
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 hover:text-indigo-500 hover:underline decoration-2 underline-offset-4 transition-all" href="#">GITHUB</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 hover:text-indigo-500 hover:underline decoration-2 underline-offset-4 transition-all" href="#">LINKEDIN</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 hover:text-indigo-500 hover:underline decoration-2 underline-offset-4 transition-all" href="#">DOCS</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-slate-500 hover:text-indigo-500 hover:underline decoration-2 underline-offset-4 transition-all" href="#">SOURCE</a>
+</div>
+</div>
+</footer>
+</body></html>

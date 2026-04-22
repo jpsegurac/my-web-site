@@ -1,0 +1,65 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { useTranslations } from "../i18n";
+
+interface Props {
+  lang?: "en" | "es";
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  readTime?: number;
+  category?: string;
+}
+
+const { lang = "en", title, description, pubDate, readTime, category } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<BaseLayout lang={lang} title={title} description={description}>
+  <article class="py-24 px-8 bg-surface dark:bg-slate-950 min-h-screen">
+    <div class="max-w-3xl mx-auto">
+      <!-- Back link -->
+      <a
+        href={`/${lang === "es" ? "es/" : ""}blog`}
+        class="inline-flex items-center gap-2 font-mono text-xs text-secondary dark:text-slate-400 uppercase tracking-widest mb-12 hover:text-primary transition-colors"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        {t.blog.back}
+      </a>
+
+      <!-- Header -->
+      <header class="mb-12 border-l-8 border-primary pl-8">
+        {category && (
+          <span class="bg-primary text-white font-label px-6 py-1 text-xs tracking-widest uppercase clip-tag inline-block mb-6">
+            {category}
+          </span>
+        )}
+        <h1 class="text-4xl md:text-5xl font-headline font-black text-on-surface dark:text-slate-50 tracking-tighter mb-6 leading-tight">
+          {title}
+        </h1>
+        {description && (
+          <p class="text-secondary dark:text-slate-400 font-body text-lg mb-6">{description}</p>
+        )}
+        <div class="flex items-center gap-4 font-mono text-xs text-secondary dark:text-slate-500 uppercase tracking-widest">
+          {pubDate && (
+            <span>{pubDate.toLocaleDateString(lang === "es" ? "es-ES" : "en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+          )}
+          {readTime && (
+            <>
+              <span class="w-1 h-1 bg-border-subtle dark:bg-slate-600"></span>
+              <span>{readTime} {t.blog.min_read}</span>
+            </>
+          )}
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="prose prose-lg dark:prose-invert max-w-none
+        prose-headings:font-headline prose-headings:font-bold prose-headings:tracking-tight
+        prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+        prose-code:font-mono prose-pre:rounded-none">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

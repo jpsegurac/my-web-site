@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from "astro:content";
+import { useTranslations } from "../../i18n";
+
+interface Props { lang?: "en" | "es" }
+const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+
+const allExp = await getCollection("experience");
+const sorted = allExp.sort((a, b) => a.data.order - b.data.order);
+const entries = await Promise.all(
+  sorted.map(async (entry) => {
+    const { Content } = await render(entry);
+    return { entry, Content };
+  })
+);
+---
+
+<section id="experience" class="py-24 px-8 bg-surface-low dark:bg-slate-900/50 triangle-mesh">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-20">
+      <span class="font-mono text-xs text-primary uppercase tracking-widest font-bold block mb-4">
+        Chronology / Lifecycle
+      </span>
+      <h2 class="text-5xl md:text-6xl font-headline font-black text-on-surface dark:text-slate-50 tracking-tighter">
+        {t.experience.title}
+      </h2>
+      <div class="w-24 h-1.5 bg-primary mt-4"></div>
+      <p class="mt-4 text-secondary dark:text-slate-400 font-body max-w-xl">
+        {t.experience.subtitle}
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Spine -->
+      <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border-subtle/40 dark:bg-slate-700 -translate-x-1/2 hidden md:block"></div>
+
+      {entries.map(({ entry, Content }, i) => (
+        <div class={`relative mb-16 md:flex md:justify-between items-start w-full ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
+          <div class="md:w-[45%]">
+            <div class="bg-white dark:bg-slate-800 border border-border-subtle/20 dark:border-slate-700 p-8 relative overflow-hidden card-lift">
+              <!-- Entry number -->
+              <div class="absolute top-0 right-0 w-12 h-12 bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
+                <span class="font-mono text-[10px] font-bold text-primary">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <!-- Company & role -->
+              <h3 class="text-xl font-headline font-bold text-on-surface dark:text-slate-50 tracking-tight mb-1">
+                {entry.data.company}
+              </h3>
+              <p class="font-label text-primary font-bold text-sm tracking-wider uppercase mb-4">
+                {lang === "es" && entry.data.roleEs ? entry.data.roleEs : entry.data.role}
+              </p>
+
+              <!-- Date badge -->
+              <div class="font-mono text-xs text-secondary dark:text-slate-400 bg-surface-container dark:bg-slate-700 px-3 py-1 inline-block mb-6">
+                [ {entry.data.startDate} — {entry.data.current ? t.experience.present : entry.data.endDate} ]
+              </div>
+
+              <!-- Body content -->
+              <div class="prose prose-sm dark:prose-invert max-w-none text-secondary dark:text-slate-300">
+                <Content />
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline connector -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-8 hidden md:flex flex-col items-center gap-1">
+            <div class="w-4 h-4 bg-primary rotate-45 border-2 border-surface dark:border-slate-900"></div>
+          </div>
+
+          <div class="md:w-[45%] hidden md:block"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
