@@ -14,7 +14,7 @@ No test runner or linter is configured.
 
 ## Architecture
 
-This is an **Astro 5** personal portfolio and blog, deployed to GitHub Pages at `https://jpsegurac.github.io/my-web-site`. The `base` is set to `/my-web-site` in `astro.config.mjs` — all internal links must use `import.meta.env.BASE_URL` as a prefix (it always has a trailing slash, e.g. `/my-web-site/` in prod, `/` in dev). Never hardcode absolute paths like `/es` or `/blog`.
+This is an **Astro 5** personal portfolio and blog, deployed to GitHub Pages at `https://jpsegurac.github.io/my-web-site/`. The `base` is set to `/my-web-site` in `astro.config.mjs` — all internal links must use `import.meta.env.BASE_URL` as a prefix (it always has a trailing slash, e.g. `/my-web-site/` in prod, `/` in dev). Never hardcode absolute paths like `/es` or `/blog`.
 
 ### Internationalization (i18n)
 
