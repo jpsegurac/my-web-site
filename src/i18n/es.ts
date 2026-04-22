@@ -10,10 +10,10 @@ export const es: Translations = {
   },
   hero: {
     badge: "Disponible para oportunidades",
-    headline1: "Construyendo soluciones",
-    headline2: "elegantes",
+    headline1: "Construyendo",
+    headline2: "soluciones",
     headline3: "a problemas complejos",
-    subtitle: "Ingeniero de Software · Full-Stack · Solucionador de Problemas",
+    subtitle: "Ingeniero de Software · Full-Stack · Escalador ",
     cta_projects: "Ver Proyectos",
     cta_blog: "Leer Blog",
   },
@@ -28,7 +28,8 @@ export const es: Translations = {
   },
   projects: {
     title: "Proyectos",
-    subtitle: "Cosas que he construido — soluciones enfocadas en rendimiento y escalabilidad.",
+    subtitle:
+      "Cosas que he construido — soluciones enfocadas en rendimiento y escalabilidad.",
     filter_all: "Todos",
     filter_web: "Web",
     filter_mobile: "Móvil",

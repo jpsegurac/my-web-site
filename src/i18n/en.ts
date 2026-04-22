@@ -8,10 +8,10 @@ export const en = {
   },
   hero: {
     badge: "Available for opportunities",
-    headline1: "Building elegant",
+    headline1: "Building",
     headline2: "solutions",
     headline3: "to complex problems",
-    subtitle: "Software Engineer · Full-Stack · Problem Solver",
+    subtitle: "Software Engineer · Full-Stack · Climber  ",
     cta_projects: "View Projects",
     cta_blog: "Read Blog",
   },
@@ -26,7 +26,8 @@ export const en = {
   },
   projects: {
     title: "Projects",
-    subtitle: "Things I've built — engineered solutions focused on performance and scalability.",
+    subtitle:
+      "Things I've built — engineered solutions focused on performance and scalability.",
     filter_all: "All",
     filter_web: "Web",
     filter_mobile: "Mobile",
