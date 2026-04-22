@@ -1,15 +1,16 @@
 ---
-company: "Acme Corp"
-role: "Senior Full-Stack Engineer"
-roleEs: "Ingeniero Full-Stack Senior"
-startDate: "Jan 2022"
-endDate: ""
-current: true
+company: "Mercado Libre"
+role: "Software Developer — Frontend"
+roleEs: "Desarrollador de Software — Frontend"
+startDate: "Jan 2025"
+endDate: "Jan 2026"
+current: false
 order: 1
 ---
 
-Led the architecture of a microservices platform serving 2M+ users, reducing API latency by 40% through caching strategies and query optimization.
+Developed and maintained high-traffic fintech interfaces for the remunerated account module across Chile, Mexico, Argentina, and Brazil, using React, TypeScript, and SCSS within the Andes corporate design system.
 
-- Designed and shipped a real-time notifications system using WebSockets and Redis Pub/Sub
-- Migrated a monolith to event-driven microservices with zero downtime
-- Mentored a team of 4 junior engineers, establishing code review and testing standards
+- Reduced dashboard load time by migrating legacy implementations to Andes, eliminating redundant dependencies
+- Cut visual regression rates across 4 markets by writing unit tests with Jest and React Testing Library on critical payment flow components
+- Reduced middle-end (Golang) average response time by ~10% through builder and country-specific logic adjustments monitored via Datadog
+- Accelerated team feature delivery by ~25% by adopting GitHub Copilot and ChatGPT, and documenting usage patterns to onboard new developers

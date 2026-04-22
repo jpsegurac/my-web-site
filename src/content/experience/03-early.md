@@ -1,15 +1,13 @@
 ---
-company: "Digital Agency"
+company: "Decibeles"
 role: "Frontend Developer"
 roleEs: "Desarrollador Frontend"
-startDate: "Jun 2018"
-endDate: "Feb 2020"
+startDate: "Jul 2022"
+endDate: "Jun 2023"
 current: false
 order: 3
 ---
 
-Delivered 15+ client projects across e-commerce, healthcare, and education verticals using React and Vue.js.
+Maintained >99% uptime for a digital platform serving artists and music-industry associations, delivering production bug fixes and improvements using HTML, CSS, Bootstrap, and JavaScript.
 
-- Built accessible, WCAG-compliant UI components used across multiple client projects
-- Integrated third-party APIs (Stripe, Twilio, Google Maps) in production applications
-- Established a component library that cut new project bootstrap time by 50%
+- Reduced incident resolution time by 40% by implementing monitoring on critical data displays and improving client support workflows
