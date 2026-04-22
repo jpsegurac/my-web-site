@@ -8,7 +8,9 @@ interface Props {
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
 const altLang = getAlternateLocale(lang);
-const altPath = lang === "en" ? "/es" : "/";
+// BASE_URL is "/my-web-site/" in prod, "/" in dev — always has trailing slash
+const base = import.meta.env.BASE_URL;
+const altPath = lang === "en" ? `${base}es` : base;
 ---
 
 <nav
@@ -16,7 +18,7 @@ const altPath = lang === "en" ? "/es" : "/";
 >
   <div class="flex justify-between items-center w-full px-8 h-20 max-w-7xl mx-auto">
     <!-- Logo -->
-    <a href={lang === "en" ? "/" : "/es"} class="flex items-center gap-3 group">
+    <a href={lang === "en" ? base : `${base}es`} class="flex items-center gap-3 group">
       <svg width="24" height="24" viewBox="0 0 24 24" class="text-primary fill-current">
         <polygon points="12,2 22,22 2,22" />
       </svg>
