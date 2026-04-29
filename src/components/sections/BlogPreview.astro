@@ -60,7 +60,7 @@ const posts = sorted.filter((p) => p !== featured).slice(0, 4);
                 {featured.data.category}
               </span>
             </div>
-            <a href={`/${lang === "es" ? "es/" : ""}blog/${featured.slug}`}
+            <a href={`/${lang === "es" ? "es/" : ""}blog/${featured.id}`}
               class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
               {t.blog.read_more}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -94,7 +94,7 @@ const posts = sorted.filter((p) => p !== featured).slice(0, 4);
             <span class="text-secondary dark:text-slate-500 font-mono text-xs uppercase flex items-center gap-2">
               {post.data.readTime} {t.blog.min_read}
             </span>
-            <a href={`/${lang === "es" ? "es/" : ""}blog/${post.slug}`}
+            <a href={`/${lang === "es" ? "es/" : ""}blog/${post.id}`}
               class="text-primary font-bold text-sm tracking-widest uppercase flex items-center gap-1 hover:gap-3 transition-all">
               Read
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>

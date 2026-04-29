@@ -3,7 +3,14 @@
     "stitch": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "stitch-mcp-server@latest"]
+      "args": [
+        "-y",
+        "stitch-mcp-server@latest"
+      ]
+    },
+    "astro-docs": {
+      "type": "http",
+      "url": "https://mcp.docs.astro.build/mcp"
     }
   }
 }
