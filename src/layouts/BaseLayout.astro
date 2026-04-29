@@ -3,17 +3,20 @@ import "../styles/global.css";
 import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
 import { SITE } from "../consts";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title?: string;
   description?: string;
   lang?: "en" | "es";
+  altPath?: string;
 }
 
 const {
   title = SITE.title,
   description = SITE.description,
   lang = "en",
+  altPath,
 } = Astro.props;
 ---
 
@@ -29,6 +32,23 @@ const {
     <link rel="icon" type="image/png" sizes="96x96" href={`${import.meta.env.BASE_URL}favicon-96x96.png`} />
     <link rel="apple-touch-icon" sizes="180x180" href={`${import.meta.env.BASE_URL}apple-touch-icon.png`} />
     <link rel="manifest" href={`${import.meta.env.BASE_URL}site.webmanifest`} />
+    <ViewTransitions />
+
+    <!-- Preserve scroll position when switching language -->
+    <script>
+      document.addEventListener("click", (e) => {
+        if ((e.target as Element).closest("[data-preserve-scroll]")) {
+          sessionStorage.setItem("restoreScrollY", String(window.scrollY));
+        }
+      });
+      document.addEventListener("astro:after-swap", () => {
+        const y = sessionStorage.getItem("restoreScrollY");
+        if (y !== null) {
+          window.scrollTo({ top: parseInt(y), behavior: "instant" });
+          sessionStorage.removeItem("restoreScrollY");
+        }
+      });
+    </script>
 
     <!-- Dark mode: read localStorage before paint to avoid flash -->
     <script is:inline>
@@ -40,7 +60,7 @@ const {
     </script>
   </head>
   <body>
-    <Navbar lang={lang} />
+    <Navbar lang={lang} altPath={altPath} />
     <main>
       <slot />
     </main>
