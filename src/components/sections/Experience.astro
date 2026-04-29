@@ -21,7 +21,7 @@ const entries = await Promise.all(
     <!-- Header -->
     <div class="mb-20">
       <span class="font-mono text-xs text-primary uppercase tracking-widest font-bold block mb-4">
-        Chronology / Lifecycle
+        {lang === "es" ? "Cronología / Trayectoria" : "Chronology / Lifecycle"}
       </span>
       <h2 class="text-5xl md:text-6xl font-headline font-black text-on-surface dark:text-slate-50 tracking-tighter">
         {t.experience.title}
@@ -63,7 +63,20 @@ const entries = await Promise.all(
 
               <!-- Body content -->
               <div class="prose prose-sm dark:prose-invert max-w-none text-secondary dark:text-slate-300">
-                <Content />
+                {lang === "es" && entry.data.summaryEs ? (
+                  <>
+                    <p>{entry.data.summaryEs}</p>
+                    {entry.data.highlightsEs && (
+                      <ul>
+                        {entry.data.highlightsEs.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Content />
+                )}
               </div>
             </div>
           </div>

@@ -40,6 +40,8 @@ const experience = defineCollection({
     endDate: z.string().optional(),
     current: z.boolean().default(false),
     order: z.number().default(99),
+    summaryEs: z.string().optional(),
+    highlightsEs: z.array(z.string()).optional(),
   }),
 });
 
