@@ -9,9 +9,9 @@ export const en = {
   },
   hero: {
     badge: "Available for opportunities",
-    headline1: "Building",
-    headline2: "solutions",
-    headline3: "to complex problems",
+    headline1: "Making interesting",
+    headline2: "things",
+    headline3: "work",
     subtitle: "Software Engineer · Full-Stack · Climber  ",
     cta_projects: "View Projects",
     cta_blog: "Read Notes",

@@ -38,6 +38,16 @@ const resolvedAltPath = altPath ?? (lang === "en" ? `${base}es` : base);
 
     <!-- Right controls -->
     <div class="flex items-center gap-4">
+      <!-- Resume download -->
+      <a
+        href={`${base}jean-segura-resume.pdf`}
+        download
+        class="hidden md:inline-flex items-center gap-2 bg-primary text-white font-label font-bold uppercase tracking-widest text-xs px-4 py-2 hover:bg-primary-light transition-colors"
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        {t.nav.resume}
+      </a>
+
       <!-- Lang switcher -->
       <a
         href={resolvedAltPath}
@@ -77,6 +87,7 @@ const resolvedAltPath = altPath ?? (lang === "en" ? `${base}es` : base);
       <a href="#experience" class="nav-link">{t.nav.experience}</a>
       <a href="#projects" class="nav-link">{t.nav.projects}</a>
       <a href="#notes" class="nav-link">{t.nav.blog}</a>
+      <a href={`${base}jean-segura-resume.pdf`} download class="nav-link text-primary">{t.nav.resume} ↓</a>
     </div>
   </div>
 </nav>

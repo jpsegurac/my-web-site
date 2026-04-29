@@ -10,9 +10,9 @@ export const es: Translations = {
   },
   hero: {
     badge: "Disponible para oportunidades",
-    headline1: "Construyendo",
-    headline2: "soluciones",
-    headline3: "a problemas complejos",
+    headline1: "Haciendo que cosas",
+    headline2: "interesantes",
+    headline3: "funcionen",
     subtitle: "Ingeniero de Software · Full-Stack · Escalador ",
     cta_projects: "Ver Proyectos",
     cta_blog: "Leer Notas",
