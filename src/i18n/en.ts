@@ -3,7 +3,8 @@ export const en = {
     about: "About",
     experience: "Experience",
     projects: "Projects",
-    blog: "Blog",
+
+    blog: "Notes",
     resume: "Resume",
   },
   hero: {
@@ -13,7 +14,7 @@ export const en = {
     headline3: "to complex problems",
     subtitle: "Software Engineer · Full-Stack · Climber  ",
     cta_projects: "View Projects",
-    cta_blog: "Read Blog",
+    cta_blog: "Read Notes",
   },
   about: {
     title: "About",
@@ -36,13 +37,13 @@ export const en = {
     live: "Live Demo",
   },
   blog: {
-    title: "Blog & Solutions",
-    subtitle: "Technical writing, tutorials, and problem-solving write-ups.",
+    title: "Notes & Thoughts",
+    subtitle: "Dev notes, life experiences, and hobbies — short and honest.",
     featured: "Featured",
-    read_more: "Read Article",
+    read_more: "Read Note",
     min_read: "min read",
-    filter_all: "All Posts",
-    back: "Back to Blog",
+    filter_all: "All Notes",
+    back: "Back to Notes",
   },
   contact: {
     title: "Ready to Build Something?",

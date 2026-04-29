@@ -5,7 +5,7 @@ export const es: Translations = {
     about: "Sobre mí",
     experience: "Experiencia",
     projects: "Proyectos",
-    blog: "Blog",
+    blog: "Notas",
     resume: "Currículum",
   },
   hero: {
@@ -15,7 +15,7 @@ export const es: Translations = {
     headline3: "a problemas complejos",
     subtitle: "Ingeniero de Software · Full-Stack · Escalador ",
     cta_projects: "Ver Proyectos",
-    cta_blog: "Leer Blog",
+    cta_blog: "Leer Notas",
   },
   about: {
     title: "Sobre mí",
@@ -38,13 +38,13 @@ export const es: Translations = {
     live: "Demo en Vivo",
   },
   blog: {
-    title: "Blog y Soluciones",
-    subtitle: "Artículos técnicos, tutoriales y soluciones a problemas.",
+    title: "Notas y Pensamientos",
+    subtitle: "Notas de código, experiencias de vida y hobbies — cortas y honestas.",
     featured: "Destacado",
-    read_more: "Leer Artículo",
+    read_more: "Leer Nota",
     min_read: "min de lectura",
-    filter_all: "Todos los Posts",
-    back: "Volver al Blog",
+    filter_all: "Todas las Notas",
+    back: "Volver a Notas",
   },
   contact: {
     title: "¿Listo para Construir Algo?",
