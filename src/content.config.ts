@@ -12,8 +12,9 @@ const blog = defineCollection({
     category: z.string(),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
-    readTime: z.number(),
+    readTime: z.number().optional(),
     lang: z.enum(["en", "es"]).default("en"),
+    altSlug: z.string().optional(),
   }),
 });
 
