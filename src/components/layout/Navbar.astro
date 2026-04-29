@@ -4,13 +4,14 @@ import { SITE } from "../../consts";
 
 interface Props {
   lang?: "en" | "es";
+  altPath?: string;
 }
-const { lang = "en" } = Astro.props;
+const { lang = "en", altPath } = Astro.props;
 const t = useTranslations(lang);
 const altLang = getAlternateLocale(lang);
 // BASE_URL is "/my-web-site/" in prod, "/" in dev — always has trailing slash
 const base = import.meta.env.BASE_URL;
-const altPath = lang === "en" ? `${base}es` : base;
+const resolvedAltPath = altPath ?? (lang === "en" ? `${base}es` : base);
 ---
 
 <nav
@@ -32,14 +33,15 @@ const altPath = lang === "en" ? `${base}es` : base;
       <a href="#about" class="nav-link">{t.nav.about}</a>
       <a href="#experience" class="nav-link">{t.nav.experience}</a>
       <a href="#projects" class="nav-link">{t.nav.projects}</a>
-      <a href="#blog" class="nav-link">{t.nav.blog}</a>
+      <a href="#notes" class="nav-link">{t.nav.blog}</a>
     </div>
 
     <!-- Right controls -->
     <div class="flex items-center gap-4">
       <!-- Lang switcher -->
       <a
-        href={altPath}
+        href={resolvedAltPath}
+        data-preserve-scroll
         class="font-mono text-xs font-bold uppercase tracking-widest text-secondary dark:text-slate-400 hover:text-primary transition-colors"
       >
         {lang.toUpperCase()} / {altLang.toUpperCase()}
@@ -74,7 +76,7 @@ const altPath = lang === "en" ? `${base}es` : base;
       <a href="#about" class="nav-link">{t.nav.about}</a>
       <a href="#experience" class="nav-link">{t.nav.experience}</a>
       <a href="#projects" class="nav-link">{t.nav.projects}</a>
-      <a href="#blog" class="nav-link">{t.nav.blog}</a>
+      <a href="#notes" class="nav-link">{t.nav.blog}</a>
     </div>
   </div>
 </nav>
